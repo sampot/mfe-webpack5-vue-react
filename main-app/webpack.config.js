@@ -9,7 +9,7 @@ module.exports = {
   entry: "./src/index.tsx",
   //context: resolve(__dirname, "./src"),
   output: {
-    publicPath: "auto",
+    publicPath: "http://localhost:3000/",
   },
 
   mode: "development",
