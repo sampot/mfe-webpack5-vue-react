@@ -6,7 +6,7 @@ const { resolve } = require("path");
 const REMOTE_NAME = "main";
 
 module.exports = {
-  entry: "./src/index.ts",
+  entry: "./src/index.tsx",
   //context: resolve(__dirname, "./src"),
   output: {
     publicPath: "auto",
@@ -49,6 +49,10 @@ module.exports = {
         ],
       },
       {
+        test: /\.css$/,
+        use: ["style-loader", "css-loader"],
+      },
+      {
         test: /\.less$/,
         use: [
           {
@@ -62,8 +66,8 @@ module.exports = {
             options: {
               lessOptions: {
                 paths: [
-                  resolve(__dirname, "../src"),
-                  resolve(__dirname, "../node_modules/antd"),
+                  resolve(__dirname, "./src"),
+                  resolve(__dirname, "./node_modules/antd"),
                 ],
                 javascriptEnabled: true,
               },

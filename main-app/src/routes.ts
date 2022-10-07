@@ -1,11 +1,4 @@
-import { Router } from "@vaadin/router";
-
-// select the DOM node where the route web components are inserted
-const outlet = document.getElementById("outlet");
-
-// create a router instance and set the routes config
-const router = new Router(outlet);
-router.setRoutes([
+export const routes = [
   {
     path: "/react-app-1",
     component: "react-app-1",
@@ -36,4 +29,4 @@ router.setRoutes([
   },
   { path: "/", component: "pn-home" },
   { path: "(.*)", component: "pn-not-found" },
-]);
+];
