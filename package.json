@@ -15,5 +15,8 @@
     "start:remote": "cd ./remote && npm start",
     "start:all": "yarn workspaces run start",
     "cleanup": "yarn workspaces run cleanup"
+  },
+  "devDependencies": {
+    "wsrun": "^5.2.4"
   }
 }
