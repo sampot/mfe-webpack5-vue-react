@@ -1,0 +1,19 @@
+{
+  "name": "react-micro-frontend-example",
+  "private": true,
+  "workspaces": {
+    "packages": [
+      "main-app",
+      "react-app-1",
+      "vue-app-1",
+      "vue-app-2"
+    ]
+  },
+  "scripts": {
+    "start": "npm run start:main & npm run start:remote",
+    "start:main": "cd ./main && npm start",
+    "start:remote": "cd ./remote && npm start",
+    "start:all": "yarn workspaces run start",
+    "cleanup": "yarn workspaces run cleanup"
+  }
+}
